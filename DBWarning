@@ -9,3 +9,15 @@ sql문을 사용하여 엔진 바꾸기를 시도하여도 MyISAM(기본)으로 
 insert시 null로 값을 넣으면 자동으로 auto_increment 해당 넘버 생성.
 
 차이점 date의 경우 oracle에서는 SYSDATE를 사용하였지만 mysql에서는 NOW()라는 함수를 사용.
+
+왜 그런지 모르겠으나,
+현재 MVC(모델2) 를 사용하고 있다.
+SQL문만 변경하였는데 사이트에서 DB insert가 되지 않았다. 아이러니하게도, 시간이 지난뒤 다시 들어가니 정상작동.(회원가입부분)
+그러나 아직 다른 부분들에서 insert시 DB 해당 값들이 NULL로 들어가는 현상이 발생.
+원인을 찾고 있으나 아직 오리무중.
+control부분에서 dto 파라미터의 값이 또는 dto 생성에서 문제가 생기는 것으로 파악중.
+또한 control에서 설정 뷰로 RequestDispatcher, forward가 되지 않는다. control상태에서 그대로 있음.
+현재 dao의 문제인지 파악중 / 리턴타입을 void로 하지말고 int or string으로 변경하여 항상 i의 값을 확인할 수 있도록 하자.
+(executeUpdate() 정상수행 1, 오류 0)
+
+주의해야 할 점! dto 에서 string은 null값이 아닌 ""로!!
