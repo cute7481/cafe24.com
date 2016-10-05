@@ -1,0 +1,5 @@
+1. /home/hosting_users/cute7481/tomcat/webapps/ROOT -> WebContent 파일 insert
+2. WEB-INF -> web.xml 수정/덮어쓰기(servlet mapping)
+3. /home/hosting_users/cute7481/tomcat/webapps/ROOT/WEB-INF/classes -> 해당 프로젝트 build/classes 내용 insert
+
+.xml 수정시 tomcat 재구동 필요!
