@@ -20,4 +20,6 @@ control부분에서 dto 파라미터의 값이 또는 dto 생성에서 문제가
 현재 dao의 문제인지 파악중 / 리턴타입을 void로 하지말고 int or string으로 변경하여 항상 i의 값을 확인할 수 있도록 하자.
 (executeUpdate() 삽입 성공 1, 삽입 실패 0)
 
+=====> 문제 해결!!!! dao void 대신 리턴 타입 지정!!!
+
 주의해야 할 점! dto 에서 string은 null값이 아닌 ""로!!
