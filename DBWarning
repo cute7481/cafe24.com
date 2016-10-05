@@ -23,6 +23,8 @@ control부분에서 dto 파라미터의 값이 또는 dto 생성에서 문제가
 =====> 문제 해결!!!! dao void 대신 리턴 타입 지정!!!
 void의 경우 결과가 나타나지 않고 dao상에서? 혹은 그이후 단계에서 멈춰있는것으로 보임!
 
++쿠키 정리할 것!
+
 주의해야 할 점! dto 에서 string은 null값이 아닌 ""로!!
 collection 의 경우 utf8_general_ci 에서 utf8_bin으로 변경. 후에 이에 대해서 공부할 예정.
 utf8_bin이 좀더 general..?한 것으로 보임.
