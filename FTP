@@ -1,0 +1,19 @@
+FTP 프로그램 다운 -> FileZilla 프로그램 다운
+사이트 관리자 - 새 사이트 추가
+호스트 : cute7481.cafe24.com (본인 url)
+프로토콜 : SFTP(SSH File Transfer Protocol)
+사용자 : ID
+비밀번호 : FTP 비밀번호 입력
+연결!
+
+텔넷 접속 -> Putty
+putty - UTF-8(char set - translation)
+Host Name : cute7481.cafe24.com (본인 url)
+port : 22
+-> session save
+login as : id 입력
+password : FTP 비밀번호(=DB 비밀번호)
+tomcat 서버 가동/중지
+시작 : tomcat/bin/startup.sh
+중지 : tomcat/bin/shutdown.sh
+
