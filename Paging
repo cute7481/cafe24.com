@@ -1,9 +1,13 @@
 Oracle
 ROWNUM 사용가능
 
-
-MySQL
+MySQL 불가
+1.
 @RNUM:=@RNUM+1 as ROWNUM
-from (select @RNUM:=0)R
-
-
+from (select @RNUM:=0)R //초기화
+2. LIMIT사용
+예제)
+"select A.* from (select B.*, 
+(select COUNT(*) as CNT from R_BOA_REPLY C where C.BNUM=B.NUM), 
+D.NICK from R_BOARD B, R_MEMBER D where B.ID=D.ID order by B.NUM desc)A 
+limit ?,?";
