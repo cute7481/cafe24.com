@@ -3,3 +3,12 @@
 3. /home/hosting_users/cute7481/tomcat/webapps/ROOT/WEB-INF/classes -> 해당 프로젝트 build/classes 내용 insert
 
 .xml 수정시 tomcat 재구동 필요!
+
+주의!!!!!
+JSP 호스팅
+공용 톰캣 재시작 시각
+http://help.cafe24.com/cs/cs_faq_view.php?idx=212&page=1&mode=&s_value=&faq_list=90&categoryIdx=0&select_os=&contentNum=7
+<내용>
+공용 톰캣은 하루에 두차례 09, 18시에 재시작
+신규 사용자는 재시작 이후 jsp 사용이 가능
+더불어 서블릿, 빈 등의 파일을 변경하면 재시작 이후 적용
