@@ -1,0 +1,6 @@
+Oracle
+ROWNUM 사용가
+@RNUM:=@RNUM+1 as ROWNUM
+from (select @RNUM:=0)R //초
+
+order by B.NUM desc)A where ROWNUM between (1+(1-1)*15) and (1*15)
