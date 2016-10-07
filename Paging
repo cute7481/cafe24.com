@@ -11,3 +11,5 @@ from (select @RNUM:=0)R //초기화
 (select COUNT(*) as CNT from R_BOA_REPLY C where C.BNUM=B.NUM), 
 D.NICK from R_BOARD B, R_MEMBER D where B.ID=D.ID order by B.NUM desc)A 
 limit ?,?";
+
++모든 테이블에 별명을 붙여야한다.
