@@ -15,3 +15,8 @@ limit ?,?";
 +모든 테이블에 별명을 붙여야한다.
 
 to_char -> DATE_FORMAT
+select C.NUM, C.ID, C.NICK, C.CONTENT, C.GOOD, C.BAD, C.CTIME from 
+(select A.NUM, A.ID, B.NICK, A.CONTENT, A.GOOD, A.BAD, DATE_FORMAT(A.RDATE, '%Y-%m-%d %T') 
+as CTIME from R_QUESTION_GET A, R_MEMBER B where A.ID=B.ID order by A.NUM desc) C limit 0,10
+
+DB TABLE : DATE -> DATETIME
