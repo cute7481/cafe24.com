@@ -1,5 +1,5 @@
 (해결)!!!!!!!!!중요!!!!!!!!!
-classes upload시 항상 전체upload!!
+classes upload시 항상 전체upload!! + tomcat restart!!
 
 oracle의 경우 외래키의 사용에 문제가 없었지만 mysql의 경우 엔진에 따라 다르다!
 외래키를 사용하기 위해서는 InnoDB 로의 엔진 변경이 필요하다.
