@@ -12,6 +12,7 @@ sql문을 사용하여 엔진 바꾸기를 시도하여도 MyISAM(기본)으로 
 insert시 null로 값을 넣으면 자동으로 auto_increment 해당 넘버 생성.
 
 차이점 date의 경우 oracle에서는 SYSDATE를 사용하였지만 mysql에서는 NOW()라는 함수를 사용.
+oracle 경우 date형식 -> date+time / mysql date->date, time-0000 / time필요시 datetime 지정필수
 
 -------------------------------------------------------------------------solved------------------------------------
 현재 MVC(모델2) 를 사용하고 있다.
