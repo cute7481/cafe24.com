@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<Server port="8228" shutdown="SHUTDOWN">
+  <Listener className="org.apache.catalina.core.AprLifecycleListener" SSLEngine="on" />
+  <Listener className="org.apache.catalina.core.JreMemoryLeakPreventionListener" />
+  <Listener className="org.apache.catalina.mbeans.GlobalResourcesLifecycleListener" />
+  <Listener className="org.apache.catalina.core.ThreadLocalLeakPreventionListener" />
+
+  <GlobalNamingResources>
+
+    <Resource name="UserDatabase" auth="Container"
+              type="org.apache.catalina.UserDatabase"
+              description="User database that can be updated and saved"
+              factory="org.apache.catalina.users.MemoryUserDatabaseFactory"
+              pathname="conf/tomcat-users.xml" />
+
+    <!-- Mysql JNDI -->
+     <Resource name="jdbc/myoracle"
+              auth="Container"
+              type="javax.sql.DataSource"
+              driverClassName="com.mysql.jdbc.Driver"
+              url="jdbc:mysql://localhost:3306/cute7481"
+              username="cute7481"
+              password="dbswjd134625@"
+              maxActive="20"
+              maxIdle="10"
+              maxWait="3000"/>
+    
+    <!-- Oracle JNDI -->
+    <!-- Resource name="jdbc/cute7481"
+              auth="Container"
+              type="javax.sql.DataSource"
+              driverClassName="oracle.jdbc.driver.OracleDriver"
+              url="jdbc:oracle:thin:@IP:1521:ORCL"
+              username="dbuser"
+              password="dbpasswd"
+              maxActive="10"
+              maxIdle="5"
+              maxWait="3000"/ -->
+
+  </GlobalNamingResources>
+
+  <Service name="cute7481">
+
+    <!-- Do not modify the specified port number! -->
+    <Connector port="8227" protocol="HTTP/1.1"
+               connectionTimeout="20000" />
+
+    <Engine name="cute7481" defaultHost="cute7481.cafe24.com">
+
+      <Realm className="org.apache.catalina.realm.LockOutRealm">
+        <Realm className="org.apache.catalina.realm.UserDatabaseRealm"
+               resourceName="UserDatabase"/>
+      </Realm>
+
+      <Host name="cute7481.cafe24.com"  appBase="webapps"
+            unpackWARs="true" autoDeploy="true">
+      </Host>
+
+    </Engine>
+
+  </Service>
+
+</Server>
